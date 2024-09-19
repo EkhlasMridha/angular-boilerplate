@@ -1,0 +1,190 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+@use "./rootline-theme.scss" as rootline-theme;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+  @include mat.all-component-themes(rootline-theme.$light-theme);
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($rootline-angular-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($rootline-angular-theme);
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.white-button-outline {
+  color: white !important;
+  border-color: white !important;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.page-container {
+  padding: 30px;
+}
+
+.side-image {
+  width: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.color-white {
+  color: #ffffff;
+}
+
+.auth-form {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.item-start {
+  align-items: flex-start;
+}
+.item-end {
+  align-items: flex-end;
+}
+.item-center {
+  align-items: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.page-margin {
+  margin: 18px 24px;
+}
+
+.page-padding {
+  padding: 18px 24px;
+}
+
+.page-body {
+  margin: 18px 24px;
+  background-color: #ffffff;
+  padding: 14px;
+  border-radius: 4px;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.w-max {
+  width: max-content;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-bold {
+  font-weight: 600;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+details > summary {
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: " ►";
+}
+details[open] summary::after {
+  content: " ▼";
+}
+
+.cdk-global-overlay-wrapper {
+  box-sizing: border-box;
+  .mat-mdc-dialog-panel {
+    .mat-mdc-dialog-container {
+      height: auto;
+    }
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
