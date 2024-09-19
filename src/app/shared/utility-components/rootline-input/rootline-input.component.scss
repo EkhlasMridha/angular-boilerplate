@@ -1,0 +1,58 @@
+.rootline-input-container {
+  flex-direction: column;
+  display: flex;
+  gap: 4px;
+  mat-error {
+    font-size: 10px;
+    padding-left: 4px;
+    &::before {
+      height: 0px;
+    }
+  }
+  mat-label {
+    color: #242424;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 1px;
+  }
+}
+
+.rootline-input {
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  height: 32px;
+  font-size: 14px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  input {
+    padding: 0px 6px 0px 6px;
+    border: none;
+    flex: 1 1 auto;
+    height: auto;
+    min-width: 0%;
+    &:focus {
+      outline: none;
+    }
+  }
+  .icon-container {
+    flex: 0 1 auto;
+  }
+}
+
+.rootline-input:focus-within {
+  outline: 1px solid #242424;
+}
+
+.icon-container {
+  .mat-datepicker-toggle {
+    button {
+      padding: 0;
+      height: 32px;
+      width: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

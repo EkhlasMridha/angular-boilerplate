@@ -1,0 +1,44 @@
+<mat-drawer-container class="sidenav-container">
+  <mat-drawer
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar color="primary"><app-logo /></mat-toolbar>
+    <div class="menu-container primary-background">
+      <mat-nav-list>
+        <mat-list-item
+          *ngFor="let nav of navigations"
+          id="{{ nav.route }}"
+          [routerLink]="'/' + nav.route"
+          [activated]="activatedRoute == nav.route"
+          [ngClass]="{ 'bg-accent': activatedRoute == nav.route }"
+        >
+          <div
+            class="full-width flex item-center"
+            [ngClass]="
+              activatedRoute === nav.route ? 'color-black' : 'color-white'
+            "
+            style="gap: 12px; font-weight: 500"
+          >
+            <mat-icon [svgIcon]="nav.svgIcon ?? ''">{{ nav.matIcon }}</mat-icon>
+            <span class="nav-text">{{ nav.name }}</span>
+          </div>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content class="sub-container">
+    <!-- <ng-container *ngTemplateOutlet="toolbar"></ng-container> -->
+    <app-toolbar
+      (menuButton)="openDrawer(drawer)"
+      [drawerOpen]="drawer.opened"
+    ></app-toolbar>
+    <div class="scroller-container">
+      <app-content></app-content>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

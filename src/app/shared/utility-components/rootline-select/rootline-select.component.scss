@@ -1,0 +1,33 @@
+.rootline-select-container {
+  flex-direction: column;
+  display: flex;
+  gap: 4px;
+  mat-label {
+    color: #242424;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 1px;
+  }
+}
+
+.rootline-select-item {
+  border: 1px solid #383838;
+  border-radius: 4px;
+  height: 32px;
+  font-size: 14px;
+}
+
+mat-select {
+  height: 100%;
+}
+
+.rootline-select-container {
+  .mat-mdc-select-trigger {
+    height: 100%;
+    padding: 0px 8px;
+  }
+}
+
+.rootline-select-item:focus-within {
+  outline: 1px solid #242424;
+}

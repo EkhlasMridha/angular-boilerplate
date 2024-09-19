@@ -1,0 +1,14 @@
+<!-- <div class="flex flex-col full-height"> -->
+<div class="modal-header {{ background }}">
+  <ng-content select="[headerText]"></ng-content>
+</div>
+<div class="modal-body flex flex-col">
+  <ng-content select="[modalBody]"></ng-content>
+</div>
+<div
+  [class]="'footer-container flex item-center ' + currentAlignment"
+  style="gap: 10px; font-size: 14px"
+>
+  <ng-content select="[footerItems]"></ng-content>
+</div>
+<!-- </div> -->

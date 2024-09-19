@@ -1,0 +1,42 @@
+<mat-toolbar #matToolbar color="secondary" class="custom-toolbar">
+  <mat-toolbar-row>
+    <div class="flex row item-center">
+      <button mat-icon-button (click)="openDrawer($event)" color="primary">
+        <mat-icon
+          svgIcon="menu-toggle"
+          [ngClass]="{ 'rotate-180': !drawerOpen }"
+        />
+      </button>
+    </div>
+    <div class="spacer"></div>
+    <div class="navitem-list flex full-height">
+      <div
+        class="nav-item full-height flex"
+        matRipple
+        [matMenuTriggerFor]="menu"
+      >
+        <div
+          class="flex item-center my-auto"
+          style="gap: 6px; margin-left: 6px; margin-right: 6px"
+        >
+          <mat-icon svgIcon="profile" class="accent-color" />
+          <span class="text-sm" style="font-weight: 500">John doe</span>
+        </div>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button mat-menu-item (click)="onChangePassword()">
+            <mat-icon>password</mat-icon>
+            <span>Change password</span>
+          </button>
+          <button mat-menu-item (click)="onSignOut()">
+            <mat-icon svgIcon="signout" color="warn"></mat-icon>
+            <span class="warn-color">Signout</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,67 @@
+<div class="modal-container" *ngIf="!modalConfig.isLoader">
+  <div class="modal-body">
+    <div
+      *ngIf="modalConfig.localIcon"
+      class="modal-icon justify-center items-center"
+    >
+      <mat-icon
+        [svgIcon]="modalConfig.localIcon"
+        [style.color]="typeColor"
+      ></mat-icon>
+    </div>
+    <div class="modal-text-contents">
+      <div class="flex item-end" style="gap: 8px">
+        <mat-icon
+          *ngIf="modalConfig.matIcon && !modalConfig.localIcon"
+          [color]="modalConfig.color"
+          >{{ modalConfig.matIcon }}</mat-icon
+        >
+        <div class="items-start" *ngIf="modalConfig.headerText">
+          <span class="text-center modal-header">{{
+            modalConfig.headerText
+          }}</span>
+        </div>
+      </div>
+      <div
+        class="items-start"
+        *ngIf="modalConfig.description"
+        style="padding-left: 30px"
+      >
+        <span class="modal-description">{{ modalConfig.description }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-end item-center" style="gap: 10px">
+    <button
+      mat-stroked-button
+      class="outline-secondary-button"
+      *ngIf="modalConfig.secondaryButtonName"
+      (click)="secodaryButton($event)"
+      tabindex="1"
+    >
+      {{ modalConfig.secondaryButtonName }}
+    </button>
+    <button
+      mat-raised-button
+      [color]="modalConfig.color"
+      *ngIf="modalConfig.primaryButtonName"
+      (click)="primaryButton($event)"
+      tabindex="0"
+      #okButton
+    >
+      {{ modalConfig.primaryButtonName }}
+    </button>
+  </div>
+</div>
+<div
+  *ngIf="modalConfig.isLoader"
+  class="item-center justify-start flex"
+  style="gap: 8px"
+>
+  <div>
+    <mat-spinner diameter="28" [color]="modalConfig.color"></mat-spinner>
+  </div>
+  <div>
+    <span style="font-size: 18px">{{ modalConfig.loaderText }}</span>
+  </div>
+</div>

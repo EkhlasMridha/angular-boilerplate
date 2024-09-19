@@ -1,0 +1,20 @@
+<ng-content select="mat-label"></ng-content>
+<div class="rootline-select-item primary-100">
+  <mat-select
+    (selectionChange)="onChangeVal($event)"
+    [placeholder]="placeHolder"
+    [value]="value"
+    [hideSingleSelectionIndicator]="true"
+    [disabled]="disabled"
+  >
+    @for (item of optionList; track item.value) {
+    <mat-option
+      [value]="item.value"
+      style="font-size: 14px; min-height: 40px"
+      class="mat-option-panel"
+    >
+      {{ item.label }}
+    </mat-option>
+    }
+  </mat-select>
+</div>

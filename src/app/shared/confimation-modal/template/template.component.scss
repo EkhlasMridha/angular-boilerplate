@@ -1,0 +1,48 @@
+:host {
+  display: flex;
+  padding: 24px 28px;
+}
+
+.outline-secondary-button {
+  border-color: currentColor;
+  background: transparent;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.modal-header {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.modal-description {
+  font-size: 14px;
+  color: #595959;
+}
+
+.modal-icon {
+  mat-icon {
+    height: 60px;
+    width: 60px;
+    font-size: 60px;
+  }
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 30px;
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .modal-text-contents {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}

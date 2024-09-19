@@ -1,0 +1,23 @@
+.modal-header {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px;
+}
+.modal-body {
+  padding: 10px;
+  gap: 10px;
+  overflow: auto;
+}
+
+:host {
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.footer-container {
+  flex-shrink: 0;
+  padding: 18px 12px;
+  border-top: 1px solid var(--border-light);
+}

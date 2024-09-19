@@ -1,0 +1,10 @@
+<input
+  hidden
+  type="file"
+  accept="image/*"
+  (change)="onFileSelected($event)"
+  #uplaoderInput
+/>
+<div class="uploader-container cursor-pointer" (click)="onUploadFile()">
+  <img [src]="imagePath || defaultImage" class="mx-auto" />
+</div>

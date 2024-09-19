@@ -1,0 +1,23 @@
+.uploader-container {
+  border: 1px dashed #a9a9a9;
+  border-radius: 4px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  &:hover::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #24242423;
+  }
+  &:hover {
+    border: 1px dashed #242424;
+  }
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}

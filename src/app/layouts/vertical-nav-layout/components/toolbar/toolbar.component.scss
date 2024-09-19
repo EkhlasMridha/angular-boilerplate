@@ -1,0 +1,30 @@
+.color-icon {
+  color: white;
+}
+
+.navitem-list {
+  gap: 8px;
+  font-size: 16px;
+}
+
+mat-icon[svgicon] {
+  height: 24px;
+  width: 24px;
+}
+
+.nav-item {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: #dddddd;
+}
+
+.custom-toolbar {
+  box-shadow: 0px 0px 4px -1px #959595;
+}
+
+:host {
+  z-index: 30;
+}
