@@ -1,0 +1,94 @@
+:host {
+  display: flex;
+}
+
+.button-sub {
+  font-size: 15px;
+  color: #c2c2c2;
+  text-align: center;
+}
+
+.button-title {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 1.3rem;
+  color: #5a5149;
+}
+
+.signup-content {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+mat-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+}
+
+.form-item-gap {
+  column-gap: 10px;
+}
+
+.title-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #242424;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #242424;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.signin-hint {
+  font-size: 14px;
+  margin-top: 18px;
+  border-top: 1px solid #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-image {
+  position: relative;
+  img {
+    height: 20rem;
+    width: 20rem;
+    // mix-blend-mode: multiply;
+    filter: grayscale(1) invert(1);
+  }
+}
+
+.plan-container {
+  gap: 8px;
+  .price {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .sessions {
+    font-size: 12px;
+  }
+}
+
+::ng-deep .country-selector {
+  opacity: 1 !important;
+  bottom: 8px !important;
+  height: 100% !important;
+}

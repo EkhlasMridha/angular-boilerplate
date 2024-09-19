@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { EmptyModule, VerticalNavLayoutModule } from 'layouts';
 import { filter, Subject, takeUntil } from 'rxjs';
-
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [VerticalNavLayoutModule, EmptyModule],
   templateUrl: './root.component.html',
   styleUrl: './root.component.scss',
 })

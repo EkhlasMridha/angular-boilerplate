@@ -1,0 +1,65 @@
+<authpage-wrapper>
+  <div
+    sideImage
+    class="side-image flex align-center justify-center primary-background"
+  >
+    Welcome to <strong>Rootline</strong>
+  </div>
+  <div authBody class="flex flex-col justify-center login-form-container">
+    <div class="signin-text">SignIn</div>
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      class="auth-form flex flex-col signin-form full-width"
+      style="gap: 12px"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput />
+        <mat-error>{{ errorObserver$.email | async }}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          placeholder="password"
+        />
+        <mat-error>{{ errorObserver$.password | async }}</mat-error>
+      </mat-form-field>
+      <div class="error-message">
+        <span class="warn-color">{{ signInError$ | async }}</span>
+      </div>
+      <div
+        style="margin-top: 25px; padding-bottom: 10px"
+        class="flex align-center justify-end"
+      >
+        <div *ngIf="!loading; else spinner">
+          <button mat-raised-button type="submit" color="primary">LogIn</button>
+        </div>
+      </div>
+      <div
+        class="flex align-center justify-center"
+        style="border-top: 1px solid #c2c2c2; padding-top: 15px"
+      >
+        <div>Don't have an account?</div>
+        <button
+          type="button"
+          color="primary"
+          class="font-semibold"
+          mat-button
+          routerLink="/signup"
+        >
+          SignUp
+        </button>
+      </div>
+    </form>
+  </div>
+</authpage-wrapper>
+
+<ng-template #spinner>
+  <div>
+    <mat-spinner diameter="28" strokeWidth="4"></mat-spinner>
+  </div>
+</ng-template>

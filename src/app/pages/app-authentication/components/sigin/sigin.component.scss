@@ -1,0 +1,66 @@
+.page-theme {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.title {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.forgot {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.side-title {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.login-form-container {
+  padding: 16px;
+  row-gap: 18px;
+  .signin-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #242424;
+    max-width: 350px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #242424;
+  }
+}
+
+.signin-form {
+  max-width: 340px;
+}
+
+.side-image {
+  position: relative;
+  img {
+    height: 20rem;
+    width: 20rem;
+    // mix-blend-mode: multiply;
+    filter: grayscale(1) invert(1);
+  }
+}
+
+:host {
+  display: flex;
+}
+
+::ng-deep .country-selector {
+  opacity: 1 !important;
+  bottom: 8px !important;
+  height: 100% !important;
+}

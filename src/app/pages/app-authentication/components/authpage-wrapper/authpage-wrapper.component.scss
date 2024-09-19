@@ -1,0 +1,34 @@
+:host {
+  height: 100%;
+}
+
+.page-theme {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  .page-content {
+    // min-width: 45%;
+    // max-width: 50%;
+    border-left: 1px solid #b4b4b4;
+    overflow-y: auto;
+    width: 100%;
+    .brand-toolbar {
+      background-color: #3a3a3a;
+      padding: 10px 12px;
+    }
+  }
+
+  [sideImage] {
+    max-width: 55%;
+    @media screen and (max-width: 750px) {
+      width: 0;
+    }
+  }
+}
+
+authpage-wrapper {
+  display: flex;
+  // flex: 1 0 auto;
+  width: 100%;
+}
