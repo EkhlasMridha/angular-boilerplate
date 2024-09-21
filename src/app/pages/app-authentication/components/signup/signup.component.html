@@ -1,9 +1,9 @@
 <authpage-wrapper>
   <div
     sideImage
-    class="side-image flex align-center justify-center primary-background"
+    class="side-image flex item-center justify-center bg-primary color-white"
   >
-    Welcome to <strong>Rootline</strong>
+    Welcome to&nbsp;<strong>Rootline</strong>
   </div>
   <div authBody style="margin-top: 20px">
     <div class="title-text">SignUp</div>
@@ -12,8 +12,11 @@
       (ngSubmit)="onSubmit()"
       class="auth-form signup-form"
     >
-      <div class="flex flex-col full-width mx-auto" style="max-width: 380px">
-        <mat-form-field appearance="outline" class="full-width">
+      <div
+        class="flex flex-col w-full mx-auto"
+        style="max-width: 380px; gap: 14px"
+      >
+        <mat-form-field appearance="outline" class="w-full">
           <mat-label>Email</mat-label>
           <input
             matInput
@@ -23,8 +26,8 @@
           />
           <mat-error>{{ errorObserver.email | async }}</mat-error>
         </mat-form-field>
-        <div class="flex flex-row form-item-gap">
-          <mat-form-field appearance="outline" class="full-width">
+        <div class="flex form-item-gap">
+          <mat-form-field appearance="outline" class="w-full">
             <mat-label>First name</mat-label>
             <input
               matInput
@@ -34,7 +37,7 @@
             />
             <mat-error>{{ errorObserver.firstName | async }}</mat-error>
           </mat-form-field>
-          <mat-form-field appearance="outline" class="full-width">
+          <mat-form-field appearance="outline" class="w-full">
             <mat-label>Last name</mat-label>
             <input
               matInput
@@ -45,7 +48,7 @@
             <mat-error>{{ errorObserver.lastName | async }}</mat-error>
           </mat-form-field>
         </div>
-        <mat-form-field appearance="outline" class="full-width">
+        <mat-form-field appearance="outline" class="w-full">
           <mat-label>Password</mat-label>
           <input
             matInput
@@ -69,7 +72,7 @@
           </button>
           <mat-error>{{ errorObserver.password | async }}</mat-error>
         </mat-form-field>
-        <mat-form-field appearance="outline" class="full-width">
+        <mat-form-field appearance="outline" class="w-full">
           <mat-label>Confirm Password</mat-label>
           <input
             matInput
@@ -95,7 +98,7 @@
         >
           Create Account
         </button>
-        <div class="full-height full-width signin-hint">
+        <div class="h-full h-full signin-hint">
           <span class="">Already have an account ?</span>
           <button
             mat-button

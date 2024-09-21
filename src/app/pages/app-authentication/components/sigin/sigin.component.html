@@ -1,16 +1,16 @@
 <authpage-wrapper>
   <div
     sideImage
-    class="side-image flex align-center justify-center primary-background"
+    class="side-image flex item-center justify-center bg-primary color-white"
   >
-    Welcome to <strong>Rootline</strong>
+    Welcome to&nbsp;<strong>Rootline</strong>
   </div>
   <div authBody class="flex flex-col justify-center login-form-container">
     <div class="signin-text">SignIn</div>
     <form
       [formGroup]="loginForm"
       (ngSubmit)="onSubmit()"
-      class="auth-form flex flex-col signin-form full-width"
+      class="auth-form flex flex-col signin-form w-full"
       style="gap: 12px"
     >
       <mat-form-field appearance="outline">
@@ -29,18 +29,20 @@
         <mat-error>{{ errorObserver$.password | async }}</mat-error>
       </mat-form-field>
       <div class="error-message">
-        <span class="warn-color">{{ signInError$ | async }}</span>
+        <span class="color-warn">{{ signInError$ | async }}</span>
       </div>
       <div
         style="margin-top: 25px; padding-bottom: 10px"
-        class="flex align-center justify-end"
+        class="flex item-center justify-end"
       >
         <div *ngIf="!loading; else spinner">
-          <button mat-raised-button type="submit" color="primary">LogIn</button>
+          <button mat-raised-button type="submit" color="primary">
+            SignIn
+          </button>
         </div>
       </div>
       <div
-        class="flex align-center justify-center"
+        class="flex item-center justify-center"
         style="border-top: 1px solid #c2c2c2; padding-top: 15px"
       >
         <div>Don't have an account?</div>
