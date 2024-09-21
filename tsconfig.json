@@ -22,7 +22,7 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
-      "@core/*": ["core/*"],
+      "@utilservice/*": ["utility-services/*"],
       "@shared/*": ["shared/*"]
     }
   },

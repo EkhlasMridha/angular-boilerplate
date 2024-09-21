@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { CoreService } from '@core/services/core.service';
+import { CoreService } from 'utility-services/core.service';
 
 @Component({
   selector: 'app-toolbar',

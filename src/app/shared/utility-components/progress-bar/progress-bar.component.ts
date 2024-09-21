@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { LoaderService } from '@core/services/loader.service';
+import { LoaderService } from 'utility-services/loader.service';
 
 @Component({
   selector: 'progress-bar',

@@ -1,6 +1,6 @@
 import { APP_INITIALIZER, NgModule, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DomainService } from '@core/services/domain.service';
+import { DomainService } from 'utility-services/domain.service';
 import { InterceptorProvider } from 'interceptors/interceptor.provider';
 import {
   provideHttpClient,
@@ -8,7 +8,6 @@ import {
 } from '@angular/common/http';
 import { EmptyModule, VerticalNavLayoutModule } from 'layouts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CoreModule } from '@core/core.module';
 import { ProgressBarComponent } from '@shared/utility-components/progress-bar/progress-bar.component';
 import { RootComponent } from './root.component';
 import { ConfimationModalModule } from '@shared/confimation-modal/confimation-modal.module';
@@ -32,8 +31,8 @@ export function initializer(domainService: DomainService) {
     VerticalNavLayoutModule,
     EmptyModule,
     BrowserAnimationsModule,
+    CommonModule,
     EmptyModule,
-    CoreModule,
     VerticalNavLayoutModule,
     ProgressBarComponent,
     ConfimationModalModule.forChild(),

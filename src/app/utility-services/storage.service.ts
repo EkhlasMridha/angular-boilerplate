@@ -1,10 +1,5 @@
 import { Inject, Injectable, InjectionToken } from '@angular/core';
-import {
-  ActivatedRoute,
-  ActivatedRouteSnapshot,
-  Router,
-  RouterModule,
-} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 export type TestType = 'reading' | 'listening' | 'writting';
 

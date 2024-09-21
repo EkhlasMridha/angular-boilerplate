@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import {
-  Router,
   ActivatedRoute,
   NavigationEnd,
-  UrlTree,
-  UrlSegmentGroup,
   PRIMARY_OUTLET,
+  Router,
   UrlSegment,
+  UrlSegmentGroup,
+  UrlTree,
 } from '@angular/router';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 @Injectable({

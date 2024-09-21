@@ -7,9 +7,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CoreService } from '@core/services/core.service';
-import { LoaderService } from '@core/services/loader.service';
-import { Subject, catchError, throwError } from 'rxjs';
+import { CoreService } from 'utility-services/core.service';
+import { LoaderService } from 'utility-services/loader.service';
 
 @Component({
   selector: 'app-signup',
@@ -32,8 +31,7 @@ export class SignupComponent implements OnInit {
   constructor(
     private coreService: CoreService,
     private formBuilder: FormBuilder,
-    private loaderService: LoaderService,
-    private router: Router
+    private loaderService: LoaderService
   ) {}
 
   get loading() {

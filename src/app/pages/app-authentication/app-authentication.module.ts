@@ -8,12 +8,9 @@ import { AuthpageWrapperComponent } from './components/authpage-wrapper/authpage
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FormsMaterialModule } from 'shared/forms-material.module';
 import { SharedMaterialModule } from 'shared/shared-material.module';
-import { noAuthGuard } from 'route-guards/auth-guard.guard';
-import { AppLogoComponent } from '@materials/app-logo/app-logo.component';
-import { AppRoutes } from 'types/common.types';
 import { MatRadioModule } from '@angular/material/radio';
-import { DurationPipe } from '@materials/pipes/duration.pipe';
-import { NgxMatIntlTelInputComponent } from 'ngx-mat-intl-tel-input';
+import { noAuthGuard } from 'routings/route-guard.guard';
+import { AppLogoComponent } from '@shared/app-logo/app-logo.component';
 
 const routes: AppRoutes = [
   {
@@ -50,8 +47,6 @@ const routes: AppRoutes = [
     SharedMaterialModule,
     AppLogoComponent,
     MatRadioModule,
-    DurationPipe,
-    NgxMatIntlTelInputComponent,
   ],
 })
 export class AppAuthenticationModule {}

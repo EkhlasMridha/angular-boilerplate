@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { DomainService } from '@utilservice/domain.service';
+import { NavTracerService } from '@utilservice/nav-tracer.service';
 import { filter, Subject, takeUntil } from 'rxjs';
 @Component({
   selector: 'app-root',
@@ -10,8 +12,17 @@ export class RootComponent {
   private _unsubscribeAll: Subject<any> = new Subject<any>();
   currentLayout: AppLayoutType = 'empty';
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private navTracer: NavTracerService
+  ) {
     this.onNavigationEndListener();
+    this.navTracer.setTitle(
+      this.activatedRoute.root,
+      DomainService.domains?.appName,
+      '::'
+    );
   }
 
   private onNavigationEndListener() {

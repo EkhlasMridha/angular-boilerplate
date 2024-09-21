@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DomainService } from '@core/services/domain.service';
+import { DomainService } from 'utility-services/domain.service';
 
 @Component({
   selector: 'app-logo',
@@ -9,5 +9,5 @@ import { DomainService } from '@core/services/domain.service';
   styleUrl: './app-logo.component.scss',
 })
 export class AppLogoComponent {
-  appLogo = DomainService.domains.appName;
+  appLogoName = DomainService.domains.appName;
 }

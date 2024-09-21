@@ -1,9 +1,9 @@
 import { Injectable, Injector } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FormService } from '@core/services/form.service';
-import { IconService } from '@core/services/icon.service';
-import { NavTracerService } from '@core/services/nav-tracer.service';
-import { TokenService } from '@core/services/token.service';
+import { FormService } from 'utility-services/form.service';
+import { IconService } from 'utility-services/icon.service';
+import { NavTracerService } from 'utility-services/nav-tracer.service';
+import { TokenService } from 'utility-services/token.service';
 import { Observable } from 'rxjs';
 
 @Injectable({

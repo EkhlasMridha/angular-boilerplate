@@ -6,7 +6,7 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
-import { DEFAULT_IMAGE_PATH } from 'app-utils/files.const';
+import { DEFAULT_IMAGE_PATH } from 'app-utils/common.const';
 
 @Component({
   selector: 'img-uploader',

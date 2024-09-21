@@ -5,13 +5,16 @@ import {
   Output,
   ViewEncapsulation,
 } from '@angular/core';
-import type { MatSelectChange } from '@angular/material/select';
+import {
+  MatSelectModule,
+  type MatSelectChange,
+} from '@angular/material/select';
 import type { SelectOptionType } from 'types/common.types';
 
 @Component({
   selector: 'rootline-select',
   standalone: true,
-  imports: [],
+  imports: [MatSelectModule],
   templateUrl: './rootline-select.component.html',
   styleUrl: './rootline-select.component.scss',
   host: {

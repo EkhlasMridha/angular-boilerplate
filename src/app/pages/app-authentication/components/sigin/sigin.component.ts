@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CoreService } from '@core/services/core.service';
-import { LoaderService } from '@core/services/loader.service';
+import { CoreService } from 'utility-services/core.service';
+import { LoaderService } from 'utility-services/loader.service';
 import { Observable, Subject } from 'rxjs';
 
 @Component({

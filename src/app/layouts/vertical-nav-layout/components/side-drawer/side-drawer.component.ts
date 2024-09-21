@@ -1,8 +1,9 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
-import { IconService } from '@core/services/icon.service';
-import { NavTracerService } from '@core/services/nav-tracer.service';
+import { IconService } from 'utility-services/icon.service';
+import { NavTracerService } from 'utility-services/nav-tracer.service';
+import { APP_NAVIGATIONS } from 'app-utils/routes.const';
 import { Observable, map, shareReplay } from 'rxjs';
 import { NavigationList } from 'types/common.types';
 
@@ -22,7 +23,7 @@ export class SideDrawerComponent {
 
   activatedRoute: string = '';
 
-  navigations: NavigationList[] = [];
+  navigations: NavigationList[] = APP_NAVIGATIONS;
 
   constructor(
     private breakpointObserver: BreakpointObserver,

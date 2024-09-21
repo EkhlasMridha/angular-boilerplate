@@ -14,7 +14,6 @@ export class FormService {
     errorObservers: Record<string, Observable<any>>,
     errorTypeGenerator: (type: string, owner: string) => any
   ) {
-    console.log(formGorup.controls);
     Object.keys(formGorup.controls).forEach((field) => {
       errorObservers[field] = formGorup.controls[field].statusChanges.pipe(
         filter((status) => status === 'INVALID'),

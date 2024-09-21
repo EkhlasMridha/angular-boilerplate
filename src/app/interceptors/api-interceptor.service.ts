@@ -5,8 +5,8 @@ import {
   HttpRequest,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CoreService } from '@core/services/core.service';
-import { DomainService } from '@core/services/domain.service';
+import { CoreService } from 'utility-services/core.service';
+import { DomainService } from 'utility-services/domain.service';
 import { ensureTailingSlash } from 'app-utils/string.utils';
 import { Observable } from 'rxjs';
 

@@ -1,13 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { JwtDataPayload, TokenDataType } from 'types/common.types';
-import { jwtDecode } from 'jwt-decode';
+import { TokenDataType } from 'types/common.types';
 @Injectable({
   providedIn: 'root',
 })
 export class TokenService {
   private readonly accessToken: string = 'at';
-  constructor(private http: HttpClient) {}
 
   storeToken(token: TokenDataType) {
     localStorage.setItem(this.accessToken, token.accessToken);
@@ -24,13 +21,6 @@ export class TokenService {
     };
 
     return token;
-  }
-
-  get userRole() {
-    let access = localStorage.getItem(this.accessToken);
-    if (!access) return;
-    const decoded = jwtDecode<JwtDataPayload>(access);
-    return decoded.role;
   }
 
   hasToken() {

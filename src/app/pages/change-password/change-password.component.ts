@@ -8,7 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { CoreService } from '@core/services/core.service';
+import { CoreService } from 'utility-services/core.service';
 import { FormsMaterialModule } from '@shared/forms-material.module';
 import { SharedMaterialModule } from '@shared/shared-material.module';
 import { ModalTemplateComponent } from '../../shared/modal-template/modal-template.component';

@@ -1,8 +1,10 @@
 import { enableProdMode } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from 'root/app.config';
-import { RootComponent } from 'root/root.component';
 import { environment } from './environments/environment';
+import { RootModule } from 'root/root.module';
+import { addBootstrapToModule } from '@angular/cdk/schematics';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 declare global {
   interface Window {
@@ -20,6 +22,6 @@ if (window) {
   window.ServerConst = environment;
 }
 
-bootstrapApplication(RootComponent, appConfig).catch((err) =>
-  console.error(err)
-);
+platformBrowserDynamic()
+  .bootstrapModule(RootModule)
+  .catch((err) => console.error(err));

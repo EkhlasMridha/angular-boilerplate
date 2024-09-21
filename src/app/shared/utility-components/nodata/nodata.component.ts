@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { IconService } from '@core/services/icon.service';
+import { IconService } from 'utility-services/icon.service';
 
 @Component({
   selector: 'nodata',

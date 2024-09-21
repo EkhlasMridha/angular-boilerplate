@@ -7,20 +7,20 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
-    <mat-toolbar color="primary"><app-logo /></mat-toolbar>
-    <div class="menu-container primary-background">
+    <mat-toolbar color="primary" class="bg-primary"><app-logo /></mat-toolbar>
+    <div class="menu-container bg-primary">
       <mat-nav-list>
         <mat-list-item
           *ngFor="let nav of navigations"
           id="{{ nav.route }}"
           [routerLink]="'/' + nav.route"
           [activated]="activatedRoute == nav.route"
-          [ngClass]="{ 'bg-accent': activatedRoute == nav.route }"
+          [ngClass]="{ 'bg-white': activatedRoute == nav.route }"
         >
           <div
             class="full-width flex item-center"
             [ngClass]="
-              activatedRoute === nav.route ? 'color-black' : 'color-white'
+              activatedRoute === nav.route ? 'color-primary' : 'color-white'
             "
             style="gap: 12px; font-weight: 500"
           >

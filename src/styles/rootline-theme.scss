@@ -141,3 +141,26 @@ $light-theme: mat.define-theme(
     ),
   )
 );
+
+mat-drawer .mat-toolbar,
+.bg-primary {
+  background-color: mat.get-theme-color($light-theme, primary, 50);
+  background: mat.get-theme-color($light-theme, primary, 50);
+}
+.bg-accent {
+  background-color: mat.get-theme-color($light-theme, secondary, 50);
+}
+.bg-white {
+  background-color: #ffffff;
+}
+.color-primary {
+  color: mat.get-theme-color($light-theme, primary, 50);
+}
+.color-accent {
+  color: mat.get-theme-color($light-theme, secondary, 50);
+}
+
+mat-drawer .mat-toolbar,
+.color-white {
+  color: #ffffff;
+}
