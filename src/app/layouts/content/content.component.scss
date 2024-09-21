@@ -3,7 +3,6 @@ app-content {
   z-index: 1;
   flex: 1 0 auto;
   display: flex;
-  height: 100%;
   box-sizing: border-box;
   > *:not(router-outlet) {
     width: 100%;

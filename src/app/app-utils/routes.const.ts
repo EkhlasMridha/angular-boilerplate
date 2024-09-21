@@ -5,6 +5,7 @@ export const RoutePaths = {
   signIn: 'signin',
   signUp: 'signup',
   dashboard: 'dashboard',
+  manage: 'manage',
 };
 
 export const APP_NAVIGATIONS: NavigationList[] = [

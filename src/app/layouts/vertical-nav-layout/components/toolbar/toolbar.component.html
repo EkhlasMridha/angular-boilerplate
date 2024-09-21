@@ -1,6 +1,6 @@
 <mat-toolbar #matToolbar color="primary" class="custom-toolbar">
   <mat-toolbar-row>
-    <div class="flex row item-center">
+    <div class="flex item-center">
       <button mat-icon-button (click)="openDrawer($event)" color="primary">
         <mat-icon
           svgIcon="menu-toggle"
@@ -9,7 +9,7 @@
       </button>
     </div>
     <div class="spacer"></div>
-    <div class="navitem-list flex full-height">
+    <div class="navitem-list flex h-full">
       <div
         class="nav-item full-height flex"
         matRipple
@@ -17,7 +17,7 @@
       >
         <div
           class="flex item-center my-auto"
-          style="gap: 6px; margin-left: 6px; margin-right: 6px"
+          style="gap: 6px; margin: 0px 6px; padding: 0px 8px"
         >
           <mat-icon svgIcon="profile" class="color-primary" />
           <span class="text-sm" style="font-weight: 500">John doe</span>
@@ -32,8 +32,8 @@
             <span>Change password</span>
           </button>
           <button mat-menu-item (click)="onSignOut()">
-            <mat-icon svgIcon="signout" color="warn"></mat-icon>
-            <span class="warn-color">Signout</span>
+            <mat-icon svgIcon="signout"></mat-icon>
+            <span class="color-warn">Signout</span>
           </button>
         </mat-menu>
       </div>

@@ -159,6 +159,9 @@ mat-drawer .mat-toolbar,
 .color-accent {
   color: mat.get-theme-color($light-theme, secondary, 50);
 }
+.color-warn {
+  color: mat.get-theme-color($light-theme, error, 50);
+}
 
 mat-drawer .mat-toolbar,
 .color-white {

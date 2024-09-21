@@ -8,7 +8,6 @@ import { RouterModule } from '@angular/router';
 const routes: AppRoutes = [
   {
     path: RoutePaths.empty,
-    component: RootComponent,
     data: {
       layout: 'side_nav',
     },
@@ -31,7 +30,6 @@ const routes: AppRoutes = [
   },
   {
     path: RoutePaths.empty,
-    component: RootComponent,
     canActivate: [noAuthGuard],
     data: {
       layout: 'empty',
