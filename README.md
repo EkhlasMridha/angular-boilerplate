@@ -1,4 +1,4 @@
-# Rootline Angular boilerplat
+# Angular boilerplat
 
 This is a boilerplate codebase to kickstart a frontend project in **Angular 18**.
 
